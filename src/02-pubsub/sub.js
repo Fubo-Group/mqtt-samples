@@ -1,8 +1,13 @@
+/**
+ * Stackblitz.comはセキュリティサンドボックスメカニズムを持っているため、外部サービスに接続することはできません。
+ * コードをテストするには、https://github.com/Fubo-Group/mqtt-samples からローカルにダウンロードして実行してください。
+ */
+
 const mqtt = require('mqtt');
 
 const clientId = 'fubo' + Math.random().toString(16).substring(2, 8);
 
-const client = mqtt.connect('mqtt://127.0.0.1:1883', {
+const client = mqtt.connect('mqtt://broker.fubogroup.com:1883', {
     clientId,
 });
 
